@@ -1,12 +1,21 @@
 import './style.css'
-import  {helloWorld}  from './helpers/addtask';
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+import  { addtask}  from './helpers/addtask';
+import { calendar } from './helpers/calendar';
+// import { inputTest } from './helpers/checked';
   const form = document.querySelector('#form_wrapper');
   form?.addEventListener('submit', function (event) {
-    event.preventDefault();
-    helloWorld();
+    event.preventDefault();    
   });
-});
+  
+
+  const send = document.querySelector('#send');
+
+  send?.addEventListener('click', function (event) {
+    event.preventDefault();
+    addtask();
+  }
+  );
+
+
+
+calendar()

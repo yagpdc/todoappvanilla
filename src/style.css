@@ -1,64 +1,47 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {
+
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 2rem 0;
+  color: #000000;
+  font-family: 'Gabarito', sans-serif;
 }
 
-#app {
+.app {
+  /* border: 1px solid red; */
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  padding: 1em;
+  width: 100vw;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+#todo {
+  background-color: #848463;
+  min-height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .card {
-  border: 1px  red solid;
-  padding: 2em;
+  padding: 0.5em 2em;
 }
 
 .card form {
@@ -66,12 +49,163 @@ h1 {
 
 }
 
+#calendario {
+  background-color: #ddeff0;
+}
+
+#pomodoro {
+  background-color: #f18492
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header svg {
+  margin: 0 2rem;
+  fill: #000000;
+  height: 2rem;
+  width: 2rem;
+  rotate: 20deg;
+}
+
 .card form button {
+  padding: 1em;
   position: absolute;
-  right: 60px;
-  top: 2px;
-  background: none;
+  top: 50%;
+  right: -5%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
   border: none;
+  background: #fff;
+}
+
+.card form button:hover{
+  background: #ec9511;
+  cursor: pointer;
+}
+
+#delete svg {
+  fill: #000;
+}
+
+#delete svg:hover {
+  animation: swing 1s infinite;
 }
 
 
+.task_item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  margin: 0.2em 0px; 
+  height: 3.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  word-break: break-all;
+  overflow-x: scroll;
+  
+}
+
+#task:focus {
+  outline: none;
+}
+
+
+.checked-text {
+  text-decoration: line-through;
+  color: #8a8a81;
+}
+
+.task_item_text {
+  display: flex;
+  width: 100%;
+  color: #000;
+  font-family: 'Pacifico', cursive;
+}
+
+input.radio_input {
+  margin: 0 0.5em;
+  align-self: center;
+  height: 14px;
+}
+
+#send {
+  border: 1px #f5e1cb solid;
+  background-color: #f5e1cb;
+}
+
+#send:hover {
+  background-color: #fff;
+  border:#ccc 1px solid ;
+}
+
+.task_item_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.task_item_btn button {
+  border: none;
+  padding: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task_item_btn button svg{
+  fill: black;
+  height: 20px;
+}
+
+
+.task_item_text p {
+  text-wrap: wrap;
+  margin-left: 1rem ;
+  font-size: 1.5rem;
+}
+
+#task {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  color: #000;
+  border-radius: 1rem;
+  margin-bottom: 0rem;
+  background-color: #f5e1cb;
+}
+
+#form_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar_wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar_wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10%;
+  background-color: #cbd8f5;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Pacifico', cursive;
+}
+
+.hoje {
+  background-color: #2492ec !important;
+  color: #fff !important;
+}
