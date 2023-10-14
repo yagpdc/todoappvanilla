@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -208,4 +208,68 @@ input.radio_input {
 .hoje {
   background-color: #2492ec !important;
   color: #fff !important;
+}
+
+.dias_do_mes{
+  cursor: pointer;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20em;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.time span{
+  font-size: 6rem;
+  font-family: 'Stick No Bills', sans-serif;
+}
+
+.options-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.options-time {
+  display: flex;
+  align-items: center;
+} 
+
+.options-container div {
+  margin: 0.5rem 0rem;
+}
+
+.options-time input{
+  width: 50%;
+}
+
+.options-btn button{
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin: 0rem 1em;
+}
+
+.options-time input:focus {
+    outline: none;
+} 
+
+.options-time input{
+  font-size: 1.2rem;
+  border: none;
+  color: #000;
+  background-color: #f5e1cb;
+  padding-left:0.5rem;
+  padding-top:0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+label{
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 2rem;
 }

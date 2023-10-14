@@ -9,4 +9,12 @@ function checkInput(checkbox: HTMLInputElement) {
     }
 }
 
-export { checkInput };
+function handleEvent(e:any) {
+    if(e.shiftKey && e.target.checked){
+        console.log(e);
+    }
+    checkInput(e.target as HTMLInputElement);
+}
+
+
+export {handleEvent};
