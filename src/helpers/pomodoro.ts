@@ -96,6 +96,9 @@ function reset(){
     }
     minutes!.innerHTML = pomodoroTime!.value
     seconds!.innerHTML = "00"
+
+    workLabel!.classList.remove('highlight')
+    shortLabel!.classList.remove('highlight')
 }
 
 

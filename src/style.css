@@ -16,6 +16,23 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .app {
+    padding: 3em 1.2em !important;
+  }
+
+  .calendar_wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
+
 h1 {
 
   font-size: 3.2em;
