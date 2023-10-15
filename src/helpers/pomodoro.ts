@@ -2,11 +2,12 @@ import ring  from "/ring.mp3";
 
 let container = document.querySelector('#html-container')
 let pomodoroTime: HTMLInputElement | null = document.querySelector('#work')
-let audio = new Audio(ring)
+let audio = new Audio(ring);
 let breakTime: HTMLInputElement | null = document.querySelector('#short')
 let shortLabel = document.querySelector('#shortLabel')
 let workLabel = document.querySelector('#workLabel')
-
+let myInterval: number | null = null;
+let tracker: boolean = true
 
 function pomodoro(){
     
@@ -26,19 +27,12 @@ function pomodoro(){
     }
 }
 
-
-
-let myInterval: number | null = null;
-let tracker: boolean = true
-
 function start() {
     
     let minutes = document.querySelector('#minutes') as HTMLSpanElement 
     let seconds = document.querySelector('#seconds')
     workLabel!.classList.add('highlight')
-
-    
-    
+    shortLabel!.classList.remove('highlight')
     if(myInterval !== null){
         console.log('Já tem um intervalo')
     } else if(myInterval === null) {
@@ -53,6 +47,7 @@ function start() {
                 shortLabel!.classList.remove('highlight')
                 workLabel!.classList.add('highlight')
                 audio.play()
+                
                 setTimeout(() => {
                     audio.pause();
                     audio.currentTime = 0; 
