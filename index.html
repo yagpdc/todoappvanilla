@@ -40,21 +40,28 @@
       <div class="options-container">
           <div class="options-time">
             <div class="options">
-              <label for="work">Horas do foco</label>
+              <label id="workLabel" for="work">Pomodoro</label>
               <input id="work" type="number" value="25" min="1" max="60" />
             </div>
             <div class="options">
-              <label for="short">Pausas curtas</label>
+              <label id="shortLabel" for="short">Short Break</label>
               <input id="short" type="number" value="5" min="1" max="60" />
             </div>
           </div>
           <div class="options-btn">
             <button id="start">Start</button>
-            <button id="pause">Pause</button>
+            <button id="pause" type="button">Pause</button>
             <button id="reset">Reset</button>
           </div>
       </div>
       <div id="html-container">
+        <div class="time-container">
+          <div class="time">
+              <span id="minutes">25</span>
+              <span>:</span>
+              <span id="seconds">00</span>
+          </div>
+      </div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
